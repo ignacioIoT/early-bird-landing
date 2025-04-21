@@ -1,132 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servicios Mineros</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
-
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      color: #000;
-      line-height: 1.6;
-    }
-
-    header {
-      background-image: url("img/header.jpg");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 5px #000;
-    }
-
-    header button {
-      padding: 15px 30px;
-      background-color: #f2c100;
-      color: #000;
-      border: none;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    section {
-      padding: 60px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    section img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 15px;
-      object-fit: cover;
-    }
-
-    .text-content {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .nosotros {
-      background-color: #fcd200;
-    }
-
-    .proposito {
-      background-color: #f0f0f0;
-      flex-direction: row-reverse;
-    }
-
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      section img {
-        max-width: 100%;
-      }
+      margin: 0;
+      font-family: 'Arial', sans-serif;
     }
   </style>
 </head>
-<body>
+<body class="bg-white">
 
-  <header>
-    <h1>Promociona tus servicios mineros</h1>
-    <button>Más información</button>
+  <!-- Header Section -->
+  <header class="bg-cover bg-center text-white p-20" style="background-image: url('img/header.jpg');">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold text-shadow-lg mb-4">Promociona tus servicios mineros</h1>
+      <button class="bg-yellow-400 text-black px-6 py-3 text-lg font-semibold rounded-lg shadow-md">Más información</button>
+    </div>
   </header>
 
-  <section class="nosotros">
-    <div class="text-content">
-      <h2>Nosotros</h2>
-      <p>Somos una empresa dedicada a ofrecer soluciones integrales para la industria minera. Ofrecemos:</p>
-      <ul>
+  <!-- Nosotros Section -->
+  <section class="bg-yellow-400 py-16 px-8 flex flex-wrap items-center justify-between max-w-7xl mx-auto rounded-lg shadow-lg">
+    <div class="w-full sm:w-1/2 lg:w-1/2 mb-6">
+      <h2 class="text-3xl font-semibold mb-4">Nosotros</h2>
+      <p class="text-lg mb-4">Somos una empresa dedicada a ofrecer soluciones integrales para la industria minera. Ofrecemos:</p>
+      <ul class="list-disc pl-5 text-lg">
         <li>Capacitación especializada</li>
         <li>Distribución de activos</li>
         <li>Representación de marcas</li>
       </ul>
     </div>
-    <img src="img/nosotros.jpg" alt="Capacitación minera">
+    <div class="w-full sm:w-1/2 lg:w-1/3">
+      <img src="img/nosotros.jpg" alt="Capacitación minera" class="w-full h-auto rounded-xl shadow-lg">
+    </div>
   </section>
 
-  <section class="proposito">
-    <div class="text-content">
-      <h2>Propósito</h2>
-      <p>Nuestro objetivo es impulsar el desarrollo del sector minero mediante la innovación, la eficiencia y la responsabilidad.</p>
+  <!-- Propósito Section -->
+  <section class="py-16 px-8 flex flex-wrap items-center justify-between max-w-7xl mx-auto bg-gray-100 rounded-lg shadow-lg mt-12">
+    <div class="w-full sm:w-1/2 lg:w-1/3">
+      <img src="img/proposito.jpg" alt="Tecnología minera" class="w-full h-auto rounded-xl shadow-lg">
     </div>
-    <img src="img/proposito.jpg" alt="Tecnología minera">
+    <div class="w-full sm:w-1/2 lg:w-1/2 mt-6 sm:mt-0">
+      <h2 class="text-3xl font-semibold mb-4">Propósito</h2>
+      <p class="text-lg">Nuestro objetivo es impulsar el desarrollo del sector minero mediante la innovación, la eficiencia y la responsabilidad.</p>
+    </div>
   </section>
 
 </body>
