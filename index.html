@@ -5,71 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servicios Mineros</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000;
+      padding: 0;
     }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+
     header {
-      background-image: url('img/header.jpg');
+      background-image: url("img/header.jpg");
       background-size: cover;
-      color: #fff;
+      background-position: center;
+      color: white;
       padding: 100px 20px;
       text-align: center;
     }
+
     header h1 {
-      font-size: 3em;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px #000;
     }
+
     header button {
-      padding: 10px 20px;
-      font-size: 1em;
+      padding: 15px 30px;
       background-color: #f2c100;
-      border: none;
       color: #000;
+      border: none;
+      font-size: 1rem;
       cursor: pointer;
+      border-radius: 5px;
     }
+
     section {
       padding: 60px 20px;
-    }
-    .nosotros, .proposito {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 40px;
       flex-wrap: wrap;
       max-width: 1200px;
       margin: auto;
     }
-    .nosotros img, .proposito img {
-      width: 45%;
-      border-radius: 10px;
+
+    section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      object-fit: cover;
     }
-    .nosotros .text, .proposito .text {
-      width: 50%;
+
+    .text-content {
+      flex: 1;
+      min-width: 280px;
     }
+
     .nosotros {
       background-color: #fcd200;
     }
+
     .proposito {
-      background-color: #f5f5f5;
+      background-color: #f0f0f0;
+      flex-direction: row-reverse;
     }
+
     h2 {
-      font-size: 2em;
+      font-size: 2.2rem;
       margin-bottom: 20px;
     }
+
     ul {
+      margin-top: 10px;
       padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      section img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Promociona tus servicios mineros</h1>
     <button>Más información</button>
   </header>
 
   <section class="nosotros">
-    <div class="text">
+    <div class="text-content">
       <h2>Nosotros</h2>
       <p>Somos una empresa dedicada a ofrecer soluciones integrales para la industria minera. Ofrecemos:</p>
       <ul>
@@ -82,11 +122,12 @@
   </section>
 
   <section class="proposito">
-    <img src="img/proposito.jpg" alt="Tecnología minera">
-    <div class="text">
+    <div class="text-content">
       <h2>Propósito</h2>
       <p>Nuestro objetivo es impulsar el desarrollo del sector minero mediante la innovación, la eficiencia y la responsabilidad.</p>
     </div>
+    <img src="img/proposito.jpg" alt="Tecnología minera">
   </section>
+
 </body>
 </html>
