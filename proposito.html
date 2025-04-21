@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,17 +8,19 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-black">
+  
+<nav class="bg-black text-white py-6 px-4 flex items-center justify-between">
+  <div class="flex items-center space-x-4">
+    <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-20 h-auto">
+  </div>
+  <ul class="flex space-x-6">
+    <li><a href="index.html" class="text-lg hover:text-yellow-400">Inicio</a></li>
+    <li><a href="nosotros.html" class="text-lg hover:text-yellow-400">Nosotros</a></li>
+    <li><a href="proposito.html" class="text-lg hover:text-yellow-400">Propósito</a></li>
+  </ul>
+</nav>
 
-  <!-- Menu de navegación -->
-  <nav class="bg-black text-white p-4">
-    <ul class="flex justify-end space-x-6">
-      <li><a href="index.html" class="text-lg hover:text-yellow-400">Inicio</a></li>
-      <li><a href="nosotros.html" class="text-lg hover:text-yellow-400">Nosotros</a></li>
-      <li><a href="proposito.html" class="text-lg hover:text-yellow-400">Propósito</a></li>
-    </ul>
-  </nav>
 
-  <!-- Propósito Section -->
   <section class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
       <div class="w-full md:w-1/2 p-4 order-2 md:order-1">
@@ -30,14 +33,12 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-black text-white py-8">
     <div class="max-w-7xl mx-auto text-center">
-      <p class="text-xl mb-2">Early Bird Company since 2020</p>
+      <p class="text-xl mb-2 uppercase">EARLY BIRD COMPANY SINCE 2020</p>
       <p class="text-lg mb-2">Santiago, Chile</p>
       <p class="text-lg">Contacto: +569 123 456 789</p>
     </div>
   </footer>
-
 </body>
 </html>
