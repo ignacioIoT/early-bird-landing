@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Propósito - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-black">
-
+<body class="bg-white text-black flex flex-col min-h-screen">
   <!-- NAVBAR -->
   <nav class="bg-black text-white py-6 px-4 flex items-center justify-between">
     <div class="flex items-center space-x-4">
@@ -20,8 +19,8 @@
     </ul>
   </nav>
 
-  <!-- Propósito Section -->
-  <section class="py-16 bg-blue-50">
+  <!-- CONTENIDO -->
+  <main class="flex-grow py-16 bg-blue-50">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
       <div class="w-full md:w-1/2 p-6">
         <h2 class="text-4xl font-bold text-gray-800 mb-6">Nuestro Propósito</h2>
@@ -42,20 +41,18 @@
         </p>
       </div>
       <div class="w-full md:w-1/2 p-6">
-        <!-- Aquí irá la imagen generada -->
         <img src="img/proposito_alt.jpg" alt="Innovación minera" class="rounded-xl shadow-lg">
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="bg-black text-white py-8">
+  <!-- FOOTER -->
+  <footer class="bg-black text-white py-8 mt-auto">
     <div class="max-w-7xl mx-auto text-center">
       <p class="text-xl mb-2 uppercase">EARLY BIRD COMPANY SINCE 2020</p>
       <p class="text-lg mb-2">Santiago, Chile</p>
       <p class="text-lg">Contacto: +569 123 456 789</p>
     </div>
   </footer>
-
 </body>
 </html>
