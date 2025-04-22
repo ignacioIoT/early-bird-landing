@@ -1,75 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propósito - Early Bird</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Menú responsivo */
-        @media (max-width: 768px) {
-            .navbar {
-                display: none;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            .mobile-menu {
-                display: none;
-                background-color: #1a202c;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                text-align: center;
-            }
-
-            .mobile-menu.active {
-                display: block;
-            }
-        }
-
-        /* Asegura que el footer esté fijo en la parte inferior */
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #000;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Propósito - Early Bird</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body class="font-sans bg-gray-100 text-gray-800">
-
-    <!-- Navbar -->
-    <nav class="bg-black p-4 flex justify-between items-center">
-        <img src="images/logo.svg" alt="Early Bird Logo" class="h-10">
-        <div class="navbar hidden md:flex space-x-6 text-white">
-            <a href="index.html" class="hover:text-yellow-500">Inicio</a>
-            <a href="nosotros.html" class="hover:text-yellow-500">Nosotros</a>
-            <a href="proposito.html" class="hover:text-yellow-500">Propósito</a>
-        </div>
-        <div class="hamburger block md:hidden">
-            <button id="hamburger-button" class="text-white">
-                &#9776;
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu">
-        <a href="index.html" class="block py-2 text-white">Inicio</a>
-        <a href="nosotros.html" class="block py-2 text-white">Nosotros</a>
-        <a href="proposito.html" class="block py-2 text-white">Propósito</a>
+<body class="bg-white text-black flex flex-col min-h-screen">
+  <!-- NAVBAR -->
+  <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
+    <div class="flex items-center space-x-4">
+      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto">
     </div>
+    <ul class="flex space-x-10">
+      <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
+      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
+      <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
+    </ul>
+  </nav>
 
-    <!-- Main Content -->
-    <section class="p-8">
-        <h2 class="text-3xl font-bold text-center mb-6">Propósito</h2>
-        <p class="text-lg text-gray-700 mb-4">En Early Bird, nuestro propósito es
+  <!-- CONTENIDO -->
+  <main class="flex-grow py-16 bg-blue-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+      <div class="w-full md:w-1/2 p-6">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Nuestro Propósito</h2>
+        <p class="text-lg text-gray-700 mb-4">
+          En <strong>Early Bird</strong>, creemos que el futuro de la minería depende de cómo integramos la tecnología, la formación de talentos y la sostenibilidad en cada proceso. 
+        </p>
+        <p class="text-lg text-gray-700 mb-4">
+          Nuestro propósito es facilitar la evolución de la industria minera a través de:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+          <li>Capacitación técnica de alto nivel</li>
+          <li>Distribución de activos y equipos especializados</li>
+          <li>Representación de marcas tecnológicas globales</li>
+          <li>Desarrollo de soluciones innovadoras</li>
+        </ul>
+        <p class="text-lg text-gray-700">
+          Trabajamos para conectar personas, conocimientos y herramientas con el objetivo de alcanzar una minería más inteligente, eficiente y humana.
+        </p>
+      </div>
+      <div class="w-full md:w-1/2 p-6">
+        <img src="img/proposito_alt.jpg" alt="Innovación minera" class="rounded-xl shadow-lg">
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white py-8 mt-auto">
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-xl mb-2 uppercase">EARLY BIRD COMPANY SINCE 2020</p>
+      <p class="text-lg mb-2">Santiago, Chile</p>
+      <p class="text-lg">Contacto: +569 123 456 789</p>
+    </div>
+  </footer>
+</body>
+</html>
