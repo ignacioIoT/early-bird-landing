@@ -7,6 +7,7 @@
     <title>Nosotros - Early Bird</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        /* Menú responsivo */
         @media (max-width: 768px) {
             .navbar {
                 display: none;
@@ -29,6 +30,17 @@
             .mobile-menu.active {
                 display: block;
             }
+        }
+
+        /* Asegura que el footer esté fijo en la parte inferior */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 1rem;
         }
     </style>
 </head>
@@ -65,7 +77,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white text-center py-4 mt-8">
+    <footer>
         <p>EARLY BIRD COMPANY SINCE 2020</p>
         <p>Santiago, Chile</p>
         <p>Contacto: +569 1234 5678</p>

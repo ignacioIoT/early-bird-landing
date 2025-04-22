@@ -7,6 +7,7 @@
     <title>Propósito - Early Bird</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        /* Menú responsivo */
         @media (max-width: 768px) {
             .navbar {
                 display: none;
@@ -29,6 +30,17 @@
             .mobile-menu.active {
                 display: block;
             }
+        }
+
+        /* Asegura que el footer esté fijo en la parte inferior */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 1rem;
         }
     </style>
 </head>
@@ -60,25 +72,4 @@
     <!-- Main Content -->
     <section class="p-8">
         <h2 class="text-3xl font-bold text-center mb-6">Propósito</h2>
-        <p class="text-lg text-gray-700 mb-4">En Early Bird, nuestro propósito es ser pioneros en el sector minero, brindando soluciones innovadoras y tecnológicas para mejorar los procesos productivos. A través de nuestra experiencia y conocimiento en el sector, buscamos transformar la industria minera y mejorar la eficiencia en cada etapa del proceso.</p>
-        <p class="text-lg text-gray-700 mb-4">Nos enfocamos en la capacitación de recursos humanos, la distribución eficiente de activos y la representación de marcas líderes, todo bajo un enfoque sostenible y con un fuerte compromiso con la innovación.</p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-black text-white text-center py-4 mt-8">
-        <p>EARLY BIRD COMPANY SINCE 2020</p>
-        <p>Santiago, Chile</p>
-        <p>Contacto: +569 1234 5678</p>
-    </footer>
-
-    <script>
-        // Toggle mobile menu
-        document.getElementById('hamburger-button').addEventListener('click', function () {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('active');
-        });
-    </script>
-
-</body>
-
-</html>
+        <p class="text-lg text-gray-700 mb-4">En Early Bird, nuestro propósito es
