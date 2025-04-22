@@ -52,5 +52,18 @@
       <p class="text-lg">Contacto: +569 123 456 789</p>
     </div>
   </footer>
+
+  <script>
+    // Función que reinicia la animación del logo
+    window.onload = function() {
+      var logo = document.querySelector('img');
+      logo.classList.remove('animate-fade-in-left'); // Elimina la clase que tiene la animación
+      // Usamos un pequeño retraso para volver a agregar la clase y ejecutar la animación
+      setTimeout(function() {
+        logo.classList.add('animate-fade-in-left');
+      }, 10); // Este tiempo en milisegundos es lo suficientemente corto para reiniciar la animación
+    };
+  </script>
+  
 </body>
 </html>

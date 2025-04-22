@@ -23,17 +23,18 @@
   </style>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
-  <!-- NAVBAR -->
-  <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
-    <div class="flex items-center space-x-4">
-      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto opacity-0 translate-x-[-20px] animate-fade-in-left">
-    </div>
-    <ul class="flex space-x-10">
-      <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
-      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
-      <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
-    </ul>
-  </nav>
+<!-- NAVBAR -->
+<nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
+  <div class="flex items-center space-x-4">
+    <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto opacity-0 translate-x-[-20px] animate-fade-in-left">
+  </div>
+  <ul class="flex space-x-10">
+    <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
+    <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
+    <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
+    <li><a href="mas_informacion.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Más Información</a></li>
+  </ul>
+</nav>
 
   <!-- CONTENIDO -->
   <main class="flex-grow py-16 px-4 max-w-4xl mx-auto">
@@ -66,5 +67,18 @@
       <p class="text-lg">Contacto: +569 123 456 789</p>
     </div>
   </footer>
+
+  <script>
+    // Función que reinicia la animación del logo
+    window.onload = function() {
+      var logo = document.querySelector('img');
+      logo.classList.remove('animate-fade-in-left'); // Elimina la clase que tiene la animación
+      // Usamos un pequeño retraso para volver a agregar la clase y ejecutar la animación
+      setTimeout(function() {
+        logo.classList.add('animate-fade-in-left');
+      }, 10); // Este tiempo en milisegundos es lo suficientemente corto para reiniciar la animación
+    };
+  </script>
+  
 </body>
 </html>
