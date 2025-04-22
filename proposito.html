@@ -5,8 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Propósito - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fijar footer en la parte inferior */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .content {
+      flex: 1;
+    }
+  </style>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
+
   <!-- NAVBAR -->
   <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
     <div class="flex items-center space-x-4">
@@ -19,9 +31,9 @@
     </ul>
   </nav>
 
-  <!-- CONTENIDO -->
-  <main class="flex-grow py-16 bg-blue-50">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+  <!-- MAIN CONTENT -->
+  <div class="content px-4 py-6 bg-blue-50">
+    <section class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
       <div class="w-full md:w-1/2 p-6">
         <h2 class="text-4xl font-bold text-gray-800 mb-6">Nuestro Propósito</h2>
         <p class="text-lg text-gray-700 mb-4">
@@ -43,8 +55,8 @@
       <div class="w-full md:w-1/2 p-6">
         <img src="img/proposito_alt.jpg" alt="Innovación minera" class="rounded-xl shadow-lg">
       </div>
-    </div>
-  </main>
+    </section>
+  </div>
 
   <!-- FOOTER -->
   <footer class="bg-black text-white py-8 mt-auto">
@@ -54,5 +66,6 @@
       <p class="text-lg">Contacto: +569 123 456 789</p>
     </div>
   </footer>
+
 </body>
 </html>
