@@ -5,23 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inicio - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes logoAnim {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .logo-animation {
+      animation: logoAnim 1.5s ease-out;
+    }
+  </style>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
- <!-- NAVBAR -->
-<nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
-  <div class="flex items-center space-x-4">
-    <!-- Logo -->
-    <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-16 sm:w-24 md:w-32 h-auto">
-  </div>
-  <ul class="flex space-x-10">
-    <!-- Enlaces del Navbar -->
-    <li><a href="index.html" class="text-base sm:text-lg md:text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
-    <li><a href="nosotros.html" class="text-base sm:text-lg md:text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
-    <li><a href="proposito.html" class="text-base sm:text-lg md:text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
-    <li><a href="mas_informacion.html" class="text-base sm:text-lg md:text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Más Información</a></li>
-  </ul>
-</nav>
-
+  <!-- NAVBAR -->
+  <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
+    <div class="flex items-center space-x-4">
+      <!-- Logo con animación -->
+      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-20 sm:w-28 md:w-32 lg:w-40 h-auto logo-animation">
+    </div>
+    <ul class="flex space-x-10">
+      <li><a href="index.html" class="text-base sm:text-lg md:text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
+      <li><a href="nosotros.html" class="text-base sm:text-lg md:text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
+      <li><a href="proposito.html" class="text-base sm:text-lg md:text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
+      <li><a href="mas_informacion.html" class="text-base sm:text-lg md:text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Más Información</a></li>
+    </ul>
+  </nav>
 
   <!-- HEADER -->
   <header class="relative h-[50vh] bg-cover bg-center" style="background-image:url('img/header.jpg')">
@@ -40,16 +54,5 @@
       <p class="text-lg">Contacto: +569 123 456 789</p>
     </div>
   </footer>
-
-  <!-- Script para reiniciar la animación del logo -->
-  <script>
-    window.onload = function() {
-      var logo = document.querySelector('img');
-      logo.classList.remove('animate-fade-in-left'); // Elimina la clase de animación
-      setTimeout(function() {
-        logo.classList.add('animate-fade-in-left'); // Agrega la clase para reiniciar la animación
-      }, 10);
-    };
-  </script>
 </body>
 </html>
