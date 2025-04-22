@@ -6,14 +6,12 @@
   <title>Inicio - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Fijar footer en la parte inferior */
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    .content {
-      flex: 1;
+    /* Establecemos el footer fijo al fondo */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      left: 0;
     }
   </style>
 </head>
@@ -32,7 +30,7 @@
   </nav>
 
   <!-- HEADER -->
-  <header class="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] bg-cover bg-center" style="background-image:url('img/header.jpg')">
+  <header class="relative h-[50vh] bg-cover bg-center" style="background-image:url('img/header.jpg')">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">Promociona tus servicios mineros</h1>
@@ -40,6 +38,23 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <div class="content px-4 py-6">
-    <!-- Agrega contenido adicional
+  <!-- CONTENIDO -->
+  <main class="flex-grow py-16 px-4 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-4">Bienvenido a Early Bird</h1>
+    <p class="text-lg leading-relaxed">
+      Somos una empresa dedicada a ofrecer soluciones innovadoras y servicios especializados para la industria minera.
+      Nuestra visión es impulsar el crecimiento y la eficiencia de nuestros clientes a través de tecnología, capacitación y distribución de activos.
+    </p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white py-8">
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-xl mb-2 uppercase">EARLY BIRD COMPANY SINCE 2020</p>
+      <p class="text-lg mb-2">Santiago, Chile</p>
+      <p class="text-lg">Contacto: +569 123 456 789</p>
+    </div>
+  </footer>
+
+</body>
+</html>
