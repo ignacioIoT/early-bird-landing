@@ -5,66 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Más Información - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes fade-in-left {
-      0% {
-        opacity: 0;
-        transform: translateX(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .animate-fade-in-left {
-      animation: fade-in-left 1s ease-out forwards;
-    }
-  </style>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
   <!-- NAVBAR -->
-<nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
-  <div class="flex items-center space-x-4">
-    <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto opacity-0 translate-x-[-20px] animate-fade-in-left">
-  </div>
-  <ul class="flex space-x-10">
-    <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
-    <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
-    <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
-    <li><a href="mas_informacion.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Más Información</a></li>
-  </ul>
-</nav>
-
-  <!-- HEADER -->
-  <header class="relative h-[50vh] bg-cover bg-center" style="background-image:url('img/header_info.jpg')">
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">Más Información</h1>
+  <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
+    <div class="flex items-center space-x-4">
+      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto">
     </div>
-  </header>
+    <ul class="flex space-x-10">
+      <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
+      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
+      <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
+      <li><a href="mas_informacion.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Más Información</a></li>
+    </ul>
+  </nav>
 
   <!-- CONTENIDO -->
-  <main class="flex-grow py-16 px-4 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6">¿Quiénes somos?</h2>
-    <p class="text-lg leading-relaxed mb-6">
-      En <strong>Early Bird</strong>, nos dedicamos a brindar soluciones tecnológicas de vanguardia para el sector minero. Nuestro enfoque está en la capacitación y distribución de equipos especializados que optimizan los procesos mineros, mejorando la eficiencia y la sostenibilidad en toda la industria.
+  <main class="flex-grow py-16 px-4 max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-gray-800 mb-6">Más Información</h2>
+    <p class="text-lg text-gray-700 mb-4">
+      En <strong>Early Bird</strong> nos especializamos en proporcionar soluciones tecnológicas avanzadas para la industria minera. 
+      Creemos que la integración de nuevas tecnologías y el desarrollo continuo de talento humano son claves para mejorar la productividad y sostenibilidad del sector.
     </p>
-    <h3 class="text-2xl font-bold mb-4">Nuestros Servicios</h3>
-    <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
-      <li>Capacitación técnica especializada</li>
-      <li>Venta y distribución de equipos tecnológicos</li>
-      <li>Consultoría en procesos mineros</li>
-      <li>Representación de marcas líderes a nivel global</li>
-    </ul>
-    <h3 class="text-2xl font-bold mb-4">¿Por qué elegirnos?</h3>
-    <p class="text-lg leading-relaxed mb-6">
-      Elegir <strong>Early Bird</strong> significa contar con un socio estratégico que entiende las necesidades de la minería moderna y se compromete con el desarrollo de soluciones innovadoras y sostenibles. Nuestro objetivo es asegurar que nuestros clientes siempre estén un paso adelante en tecnología, eficiencia y rentabilidad.
+    <p class="text-lg text-gray-700 mb-4">
+      A través de nuestra plataforma, ofrecemos capacitación especializada en minería, distribución de equipos de alta calidad y representación de marcas globales que están liderando la transformación del sector.
     </p>
+    <p class="text-lg text-gray-700 mb-4">
+      Si deseas saber más sobre cómo podemos ayudarte, contáctanos y descubre cómo nuestras soluciones pueden impulsar el futuro de tu empresa.
+    </p>
+    
+    <!-- Imagen de referencia -->
+    <img src="img/imagen7.jpg" alt="Más Información" class="w-full h-auto rounded-xl shadow-lg mt-6">
 
-    <div class="flex justify-center">
-      <img src="img/imagen7.jpg" alt="Imagen de referencia" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-1/2">
-    </div>
   </main>
 
   <!-- FOOTER -->
@@ -75,18 +47,16 @@
       <p class="text-lg">Contacto: +569 123 456 789</p>
     </div>
   </footer>
-  
+
+  <!-- Script para reiniciar la animación del logo -->
   <script>
-    // Función que reinicia la animación del logo
     window.onload = function() {
       var logo = document.querySelector('img');
-      logo.classList.remove('animate-fade-in-left'); // Elimina la clase que tiene la animación
-      // Usamos un pequeño retraso para volver a agregar la clase y ejecutar la animación
+      logo.classList.remove('animate-fade-in-left'); // Elimina la clase de animación
       setTimeout(function() {
-        logo.classList.add('animate-fade-in-left');
-      }, 10); // Este tiempo en milisegundos es lo suficientemente corto para reiniciar la animación
+        logo.classList.add('animate-fade-in-left'); // Agrega la clase para reiniciar la animación
+      }, 10);
     };
   </script>
-  
 </body>
 </html>

@@ -5,36 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nosotros - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes fade-in-left {
-      0% {
-        opacity: 0;
-        transform: translateX(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .animate-fade-in-left {
-      animation: fade-in-left 1s ease-out forwards;
-    }
-  </style>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
-<!-- NAVBAR -->
-<nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
-  <div class="flex items-center space-x-4">
-    <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto opacity-0 translate-x-[-20px] animate-fade-in-left">
-  </div>
-  <ul class="flex space-x-10">
-    <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
-    <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
-    <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
-    <li><a href="mas_informacion.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Más Información</a></li>
-  </ul>
-</nav>
+  <!-- NAVBAR -->
+  <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
+    <div class="flex items-center space-x-4">
+      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto">
+    </div>
+    <ul class="flex space-x-10">
+      <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
+      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
+      <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
+      <li><a href="mas_informacion.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Más Información</a></li>
+    </ul>
+  </nav>
 
   <!-- CONTENIDO -->
   <main class="flex-grow py-16 px-4 max-w-4xl mx-auto">
@@ -43,17 +27,20 @@
       Somos una startup dedicada a la innovación en la industria minera. Nuestra misión es transformar el sector con soluciones tecnológicas, capacitación especializada y representación de marcas líderes a nivel global. 
       Trabajamos con pasión por una minería más eficiente, responsable y conectada con el futuro.
     </p>
-    <h2 class="text-2xl font-bold mb-4">Nuestro Carrusel de Imágenes</h2>
-    <div class="relative w-full overflow-hidden">
-      <div class="absolute inset-0 flex items-center justify-center space-x-4">
-        <div class="w-full md:w-1/3 p-2">
-          <img src="img/imagen1.jpg" alt="Imagen 1" class="w-full rounded-lg border-2 border-gray-300">
+    <p class="text-lg leading-relaxed mb-6">
+      Nuestra visión es ser un referente global en innovación tecnológica aplicada a la minería, enfocándonos en la sostenibilidad, eficiencia y el desarrollo humano. 
+    </p>
+
+    <div class="w-full max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="w-full h-auto">
+          <img src="img/imagen1.jpg" alt="Imagen 1" class="w-full h-full object-cover rounded-lg shadow-md border-2 border-gray-300">
         </div>
-        <div class="w-full md:w-1/3 p-2">
-          <img src="img/imagen2.jpg" alt="Imagen 2" class="w-full rounded-lg border-2 border-gray-300">
+        <div class="w-full h-auto">
+          <img src="img/imagen2.jpg" alt="Imagen 2" class="w-full h-full object-cover rounded-lg shadow-md border-2 border-gray-300">
         </div>
-        <div class="w-full md:w-1/3 p-2">
-          <img src="img/imagen3.jpg" alt="Imagen 3" class="w-full rounded-lg border-2 border-gray-300">
+        <div class="w-full h-auto">
+          <img src="img/imagen3.jpg" alt="Imagen 3" class="w-full h-full object-cover rounded-lg shadow-md border-2 border-gray-300">
         </div>
       </div>
     </div>
@@ -68,17 +55,15 @@
     </div>
   </footer>
 
+  <!-- Script para reiniciar la animación del logo -->
   <script>
-    // Función que reinicia la animación del logo
     window.onload = function() {
       var logo = document.querySelector('img');
-      logo.classList.remove('animate-fade-in-left'); // Elimina la clase que tiene la animación
-      // Usamos un pequeño retraso para volver a agregar la clase y ejecutar la animación
+      logo.classList.remove('animate-fade-in-left'); // Elimina la clase de animación
       setTimeout(function() {
-        logo.classList.add('animate-fade-in-left');
-      }, 10); // Este tiempo en milisegundos es lo suficientemente corto para reiniciar la animación
+        logo.classList.add('animate-fade-in-left'); // Agrega la clase para reiniciar la animación
+      }, 10);
     };
   </script>
-  
 </body>
 </html>

@@ -5,28 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inicio - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes fade-in-left {
-      0% {
-        opacity: 0;
-        transform: translateX(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .animate-fade-in-left {
-      animation: fade-in-left 1s ease-out forwards;
-    }
-  </style>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
   <!-- NAVBAR -->
   <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
     <div class="flex items-center space-x-4">
-      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto opacity-0 translate-x-[-20px] animate-fade-in-left">
+      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto">
     </div>
     <ul class="flex space-x-10">
       <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
@@ -54,17 +38,15 @@
     </div>
   </footer>
 
+  <!-- Script para reiniciar la animación del logo -->
   <script>
-    // Función que reinicia la animación del logo
     window.onload = function() {
       var logo = document.querySelector('img');
-      logo.classList.remove('animate-fade-in-left'); // Elimina la clase que tiene la animación
-      // Usamos un pequeño retraso para volver a agregar la clase y ejecutar la animación
+      logo.classList.remove('animate-fade-in-left'); // Elimina la clase de animación
       setTimeout(function() {
-        logo.classList.add('animate-fade-in-left');
-      }, 10); // Este tiempo en milisegundos es lo suficientemente corto para reiniciar la animación
+        logo.classList.add('animate-fade-in-left'); // Agrega la clase para reiniciar la animación
+      }, 10);
     };
   </script>
-  
 </body>
 </html>
