@@ -12,18 +12,24 @@
     <div class="flex items-center space-x-4">
       <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto">
     </div>
-    <ul class="flex space-x-10">
+    <ul class="flex space-x-10 hidden md:flex">
       <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
       <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
       <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
     </ul>
+    <!-- Mobile menu -->
+    <div class="md:hidden">
+      <button class="text-white">
+        <i class="fas fa-bars"></i> <!-- Icono de menú hamburguesa (debes incluir la librería de FontAwesome si no la tienes) -->
+      </button>
+    </div>
   </nav>
 
   <!-- CONTENIDO -->
   <main class="flex-grow py-16 bg-blue-50">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
       <div class="w-full md:w-1/2 p-6">
-        <h2 class="text-4xl font-bold text-gray-800 mb-6">Nuestro Propósito</h2>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Nuestro Propósito</h2>
         <p class="text-lg text-gray-700 mb-4">
           En <strong>Early Bird</strong>, creemos que el futuro de la minería depende de cómo integramos la tecnología, la formación de talentos y la sostenibilidad en cada proceso. 
         </p>
@@ -31,28 +37,4 @@
           Nuestro propósito es facilitar la evolución de la industria minera a través de:
         </p>
         <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
-          <li>Capacitación técnica de alto nivel</li>
-          <li>Distribución de activos y equipos especializados</li>
-          <li>Representación de marcas tecnológicas globales</li>
-          <li>Desarrollo de soluciones innovadoras</li>
-        </ul>
-        <p class="text-lg text-gray-700">
-          Trabajamos para conectar personas, conocimientos y herramientas con el objetivo de alcanzar una minería más inteligente, eficiente y humana.
-        </p>
-      </div>
-      <div class="w-full md:w-1/2 p-6">
-        <img src="img/proposito_alt.jpg" alt="Innovación minera" class="rounded-xl shadow-lg">
-      </div>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-black text-white py-8 mt-auto">
-    <div class="max-w-7xl mx-auto text-center">
-      <p class="text-xl mb-2 uppercase">EARLY BIRD COMPANY SINCE 2020</p>
-      <p class="text-lg mb-2">Santiago, Chile</p>
-      <p class="text-lg">Contacto: +569 123 456 789</p>
-    </div>
-  </footer>
-</body>
-</html>
+          <li>Capacitación técnica de alto nivel</

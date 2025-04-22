@@ -12,16 +12,22 @@
     <div class="flex items-center space-x-4">
       <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto">
     </div>
-    <ul class="flex space-x-10">
+    <ul class="flex space-x-10 hidden md:flex">
       <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
       <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
       <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
     </ul>
+    <!-- Mobile menu -->
+    <div class="md:hidden">
+      <button class="text-white">
+        <i class="fas fa-bars"></i> <!-- Icono de menú hamburguesa (debes incluir la librería de FontAwesome si no la tienes) -->
+      </button>
+    </div>
   </nav>
 
   <!-- CONTENIDO -->
   <main class="flex-grow py-16 px-4 max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold mb-4">Nosotros</h1>
+    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Nosotros</h1>
     <p class="text-lg leading-relaxed">
       Somos una startup dedicada a la innovación en la industria minera. Nuestra misión es transformar el sector con soluciones tecnológicas, capacitación especializada y representación de marcas líderes a nivel global. 
       Trabajamos con pasión por una minería más eficiente, responsable y conectada con el futuro.
