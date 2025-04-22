@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio - Early Bird</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes logoFadeIn {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .logo-animate {
+      animation: logoFadeIn 1s ease-in-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-white text-black flex flex-col min-h-screen">
+
+  <!-- NAVBAR -->
+  <nav class="bg-black text-white py-4 px-6 flex flex-wrap items-center justify-between shadow-md">
+    <div class="flex items-center space-x-4">
+      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="h-10 md:h-16 logo-animate">
+    </div>
+    <ul class="flex flex-wrap space-x-4 md:space-x-10 text-sm md:text-xl tracking-wider uppercase">
+      <li><a href="index.html" class="border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
+      <li><a href="nosotros.html" class="border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
+      <li><a href="proposito.html" class="border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
+      <li><a href="mas_informacion.html" class="border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Más Información</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="flex-grow flex flex-col items-center justify-center text-center px-4 py-12">
+    <img src="img/imagen7.jpg" alt="Imagen principal" class="w-full max-h-[60vh] object-cover rounded-lg shadow-md mb-6">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4 text-black">Contáctanos para pasar al siguiente nivel</h1>
+    <a href="mas_informacion.html" class="bg-yellow-400 text-black px-6 py-3 text-lg font-semibold rounded-md hover:bg-yellow-300 transition duration-300">
+      Más Información
+    </a>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white py-8 mt-auto">
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-xl mb-2 uppercase">EARLY BIRD COMPANY SINCE 2020</p>
+      <p class="text-lg mb-2">Santiago, Chile</p>
+      <p class="text-lg">Contacto: +569 123 456 789</p>
+    </div>
+  </footer>
+
+</body>
+</html>
