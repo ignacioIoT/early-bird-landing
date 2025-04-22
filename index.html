@@ -1,46 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inicio - Early Bird</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Bird - Página de Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @media (max-width: 768px) {
+            .navbar {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .mobile-menu {
+                display: none;
+                background-color: #1a202c;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+    </style>
 </head>
-<body class="bg-white text-black flex flex-col min-h-screen">
-  <!-- NAVBAR -->
-  <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
-    <div class="flex items-center space-x-4">
-      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto">
-    </div>
-    <ul class="flex space-x-10 hidden md:flex">
-      <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
-      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
-      <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
-    </ul>
-    <!-- Mobile menu -->
-    <div class="md:hidden">
-      <button class="text-white">
-        <i class="fas fa-bars"></i> <!-- Icono de menú hamburguesa (debes incluir la librería de FontAwesome si no la tienes) -->
-      </button>
-    </div>
-  </nav>
 
-  <!-- HEADER -->
-  <header class="relative h-[50vh] bg-cover bg-center" style="background-image:url('img/header.jpg')">
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Promociona tus servicios mineros</h1>
-      <button class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 text-lg font-semibold rounded-lg shadow-md transition">Más información</button>
-    </div>
-  </header>
+<body class="font-sans bg-gray-100 text-gray-800">
 
-  <!-- FOOTER -->
-  <footer class="bg-black text-white py-8 mt-auto">
-    <div class="max-w-7xl mx-auto text-center">
-      <p class="text-xl mb-2 uppercase">EARLY BIRD COMPANY SINCE 2020</p>
-      <p class="text-lg mb-2">Santiago, Chile</p>
-      <p class="text-lg">Contacto: +569 123 456 789</p>
+    <!-- Navbar -->
+    <nav class="bg-black p-4 flex justify-between items-center">
+        <img src="images/logo.svg" alt="Early Bird Logo" class="h-10">
+        <div class="navbar hidden md:flex space-x-6 text-white">
+            <a href="index.html" class="hover:text-yellow-500">Inicio</a>
+            <a href="nosotros.html" class="hover:text-yellow-500">Nosotros</a>
+            <a href="proposito.html" class="hover:text-yellow-500">Propósito</a>
+        </div>
+        <div class="hamburger block md:hidden">
+            <button id="hamburger-button" class="text-white">
+                &#9776;
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="index.html" class="block py-2 text-white">Inicio</a>
+        <a href="nosotros.html" class="block py-2 text-white">Nosotros</a>
+        <a href="proposito.html" class="block py-2 text-white">Propósito</a>
     </div>
-  </footer>
+
+    <!-- Main Content (Hero Section) -->
+    <section class="bg-cover bg-center h-96 relative" style="background-image: url('images/hero.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 flex justify-center items-center text-white text-center">
+            <h1 class="text-4xl md:text-6xl font-bold">Bienvenidos a Early Bird</h1>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center py-4 mt-8">
+        <p>EARLY BIRD COMPANY SINCE 2020</p>
+        <p>Santiago, Chile</p>
+        <p>Contacto: +569 1234 5678</p>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.getElementById('hamburger-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+
 </body>
+
 </html>
