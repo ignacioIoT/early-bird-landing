@@ -5,61 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nosotros - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-  <style>
-    .carousel-image {
-      transition: transform 0.5s ease-in-out;
-    }
-  </style>
+  <script>
+    // Carrusel automático
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.carousel-slide');
+      let current = 0;
+
+      setInterval(() => {
+        slides[current].classList.add('hidden');
+        current = (current + 1) % slides.length;
+        slides[current].classList.remove('hidden');
+      }, 2000);
+    });
+  </script>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
   <!-- NAVBAR -->
   <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
     <div class="flex items-center space-x-4">
-      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto">
+      <img src="img/early_bird_logo_white.png" alt="Logo Early Bird" class="w-24 h-auto">
     </div>
     <ul class="flex space-x-10">
       <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
-      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
-      <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
-    </ul>
-  </nav>
-
-  <!-- CONTENIDO -->
-  <main class="flex-grow py-16 px-4 max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold mb-4">Nosotros</h1>
-    <p class="text-lg leading-relaxed mb-8">
-      Somos una startup dedicada a la innovación en la industria minera. Nuestra misión es transformar el sector con soluciones tecnológicas, capacitación especializada y representación de marcas líderes a nivel global. 
-      Trabajamos con pasión por una minería más eficiente, responsable y conectada con el futuro.
-    </p>
-
-    <!-- CARRUSEL DE IMÁGENES -->
-    <div class="relative w-full overflow-hidden">
-      <div x-data="{
-        images: ['img/imagen1.jpg', 'img/imagen2.jpg', 'img/imagen3.jpg', 'img/imagen4.jpg', 'img/imagen5.jpg', 'img/imagen6.jpg'],
-        currentIndex: 0,
-        nextImage() {
-          this.currentIndex = (this.currentIndex + 1) % this.images.length;
-        }
-      }" x-init="setInterval(() => nextImage(), 2000)">
-        <div class="flex transition-transform duration-1000 ease-in-out" :style="'transform: translateX(-' + (currentIndex * 100) + '%)'">
-          <template x-for="(image, index) in images" :key="index">
-            <div class="w-full flex-shrink-0">
-              <img :src="image" :alt="'Imagen ' + (index + 1)" class="w-full h-auto carousel-image rounded-lg shadow-lg">
-            </div>
-          </template>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-black text-white py-8 mt-auto">
-    <div class="max-w-7xl mx-auto text-center">
-      <p class="text-xl mb-2 uppercase">EARLY BIRD COMPANY SINCE 2020</p>
-      <p class="text-lg mb-2">Santiago, Chile</p>
-      <p class="text-lg">Contacto: +569 123 456 789</p>
-    </div>
-  </footer>
-</body>
-</html>
+      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase
