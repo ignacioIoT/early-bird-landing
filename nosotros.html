@@ -19,96 +19,26 @@
     .logo-animation {
       animation: logoAnim 1.5s ease-out;
     }
-
-    /* Carrusel */
-    .carousel {
-      display: flex;
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      height: auto;
-    }
-    .carousel-track {
-      display: flex;
-      width: calc(100% * 6);
-      animation: scroll 18s linear infinite;
-    }
-    .carousel-slide {
-      min-width: 100%;
-      transition: transform 0.5s ease-in-out;
-      padding: 0.5rem;
-    }
-    .carousel-slide img {
-      width: 100%;
-      height: auto;
-      border: 2px solid #e5e7eb;
-      border-radius: 0.5rem;
-    }
-    @keyframes scroll {
-      0%   { transform: translateX(0%); }
-      16%  { transform: translateX(-100%); }
-      32%  { transform: translateX(-200%); }
-      48%  { transform: translateX(-300%); }
-      64%  { transform: translateX(-400%); }
-      80%  { transform: translateX(-500%); }
-      100% { transform: translateX(0%); }
-    }
   </style>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
   <!-- NAVBAR -->
   <nav class="bg-black text-white py-4 px-6 flex items-center justify-between shadow-md">
     <div class="flex items-center space-x-4">
+      <!-- Logo con animación -->
       <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="h-12 sm:h-16 md:h-20 logo-animation">
     </div>
     <ul class="flex space-x-4 sm:space-x-6 md:space-x-8">
       <li><a href="index.html" class="text-sm sm:text-base md:text-lg tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
-      <li><a href="nosotros.html" class="text-sm sm:text-base md:text-lg tracking-wider uppercase border-b-2 border-yellow-400 pb-1">Nosotros</a></li>
+      <li><a href="nosotros.html" class="text-sm sm:text-base md:text-lg tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
       <li><a href="proposito.html" class="text-sm sm:text-base md:text-lg tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
       <li><a href="mas_informacion.html" class="text-sm sm:text-base md:text-lg tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Más Información</a></li>
     </ul>
   </nav>
 
   <!-- CONTENIDO PRINCIPAL -->
-  <main class="flex-grow px-4 py-12 max-w-7xl mx-auto">
-    <h1 class="text-4xl font-bold mb-6 text-center">Nosotros</h1>
-
-    <!-- Carrusel de Imágenes -->
-    <div class="carousel mb-12">
-      <div class="carousel-track">
-        <div class="carousel-slide"><img src="img/imagen1.jpg" alt="Imagen 1"></div>
-        <div class="carousel-slide"><img src="img/imagen2.jpg" alt="Imagen 2"></div>
-        <div class="carousel-slide"><img src="img/imagen3.jpg" alt="Imagen 3"></div>
-        <div class="carousel-slide"><img src="img/imagen4.jpg" alt="Imagen 4"></div>
-        <div class="carousel-slide"><img src="img/imagen5.jpg" alt="Imagen 5"></div>
-        <div class="carousel-slide"><img src="img/imagen6.jpg" alt="Imagen 6"></div>
-      </div>
-    </div>
-
-    <!-- Texto -->
-    <div class="text-gray-800 space-y-6 text-lg leading-relaxed">
-      <p>
-        En <strong>Early Bird</strong>, somos una startup tecnológica con raíces en la innovación minera. Nuestro objetivo es impulsar el cambio en la industria a través del conocimiento, la tecnología y el compromiso.
-      </p>
-      <p>
-        Nos especializamos en la distribución de equipos de alto rendimiento, capacitación técnica personalizada y representación de marcas líderes del sector minero. Nuestro equipo multidisciplinario trabaja para conectar soluciones globales con desafíos locales.
-      </p>
-      <p>
-        Creemos en una minería más eficiente, segura y responsable. Por eso, promovemos la integración de tecnologías emergentes, fomentamos la sostenibilidad y apoyamos a los nuevos talentos en su crecimiento profesional.
-      </p>
-      <p>
-        Early Bird no solo provee soluciones, sino que también construye comunidad. Nos esforzamos por ser parte activa de una red de colaboración que potencie el desarrollo del sector extractivo en América Latina.
-      </p>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-black text-white py-8 mt-auto">
-    <div class="max-w-7xl mx-auto text-center">
-      <p class="text-base sm:text-lg mb-2 uppercase">EARLY BIRD COMPANY SINCE 2020</p>
-      <p class="text-sm sm:text-base mb-2">Santiago, Chile</p>
-      <p class="text-sm sm:text-base">Contacto: +569 123 456 789</p>
-    </div>
-  </footer>
-</body>
-</html>
+  <main class="flex-grow">
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <h2
+::contentReference[oaicite:3]{index=3}
+ 
