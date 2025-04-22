@@ -5,19 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nosotros - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Carrusel automático
-    document.addEventListener('DOMContentLoaded', () => {
-      const slides = document.querySelectorAll('.carousel-slide');
-      let current = 0;
-
-      setInterval(() => {
-        slides[current].classList.add('hidden');
-        current = (current + 1) % slides.length;
-        slides[current].classList.remove('hidden');
-      }, 2000);
-    });
-  </script>
+  <style>
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-item {
+      min-width: 100%;
+    }
+  </style>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
   <!-- NAVBAR -->
@@ -26,5 +22,53 @@
       <img src="img/early_bird_logo_white.png" alt="Logo Early Bird" class="w-24 h-auto">
     </div>
     <ul class="flex space-x-10">
-      <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
-      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase
+      <li><a href="index.html" class="text-xl tracking-wider uppercase hover:text-yellow-400">Inicio</a></li>
+      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase text-yellow-400">Nosotros</a></li>
+      <li><a href="proposito.html" class="text-xl tracking-wider uppercase hover:text-yellow-400">Propósito</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <main class="flex-grow bg-white py-12">
+    <section class="max-w-5xl mx-auto px-4 mb-12">
+      <h1 class="text-5xl font-bold text-center mb-8">Nosotros</h1>
+      <p class="text-lg text-gray-700 mb-6 text-center">
+        En Early Bird, nos apasiona la innovación en la industria minera. Nuestra misión es impulsar el desarrollo tecnológico a través de soluciones que conecten personas, herramientas y conocimiento.
+      </p>
+      <p class="text-lg text-gray-700 mb-6 text-center">
+        Representamos marcas globales, entregamos capacitación técnica y distribuimos equipos de alto rendimiento con el compromiso de llevar la minería al siguiente nivel.
+      </p>
+    </section>
+
+    <!-- CARRUSEL -->
+    <section class="overflow-hidden max-w-4xl mx-auto relative">
+      <div id="carousel" class="carousel-track">
+        <img src="img/imagen1.jpg" class="carousel-item border border-gray-300 rounded-lg shadow-md mx-2" alt="Imagen 1">
+        <img src="img/imagen2.jpg" class="carousel-item border border-gray-300 rounded-lg shadow-md mx-2" alt="Imagen 2">
+        <img src="img/imagen3.jpg" class="carousel-item border border-gray-300 rounded-lg shadow-md mx-2" alt="Imagen 3">
+        <img src="img/imagen4.jpg" class="carousel-item border border-gray-300 rounded-lg shadow-md mx-2" alt="Imagen 4">
+        <img src="img/imagen5.jpg" class="carousel-item border border-gray-300 rounded-lg shadow-md mx-2" alt="Imagen 5">
+        <img src="img/imagen6.jpg" class="carousel-item border border-gray-300 rounded-lg shadow-md mx-2" alt="Imagen 6">
+      </div>
+    </section>
+
+    <script>
+      const track = document.getElementById("carousel");
+      let index = 0;
+      setInterval(() => {
+        index = (index + 1) % 6;
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }, 2000);
+    </script>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white py-8 mt-auto">
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-xl mb-2 uppercase">EARLY BIRD COMPANY SINCE 2020</p>
+      <p class="text-lg mb-2">Santiago, Chile</p>
+      <p class="text-lg">Contacto: +569 123 456 789</p>
+    </div>
+  </footer>
+</body>
+</html>
