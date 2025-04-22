@@ -5,13 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inicio - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fade-in-left {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-fade-in-left {
+      animation: fade-in-left 1s ease-out forwards;
+    }
+  </style>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
-  
   <!-- NAVBAR -->
   <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
     <div class="flex items-center space-x-4">
-      <img src="img/early_bird_logo_white.png" alt="Logo Early Bird" class="w-24 h-auto">
+      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto opacity-0 translate-x-[-20px] animate-fade-in-left">
     </div>
     <ul class="flex space-x-10">
       <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
@@ -21,15 +36,11 @@
   </nav>
 
   <!-- HEADER -->
-  <header class="relative bg-cover bg-center sm:bg-center md:bg-top h-[60vh] sm:h-[70vh] md:h-[90vh]" style="background-image:url('img/header.jpg')">
+  <header class="relative h-[50vh] bg-cover bg-center" style="background-image:url('img/header.jpg')">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6">Contáctanos para pasar al siguiente nivel</h1>
-      <a href="mas-informacion.html">
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 text-lg font-semibold rounded-lg shadow-md transition">
-          Más información
-        </button>
-      </a>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">Contáctanos para pasar al siguiente nivel</h1>
+      <button class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 text-lg font-semibold rounded-lg shadow-md transition">Más información</button>
     </div>
   </header>
 
@@ -41,6 +52,5 @@
       <p class="text-lg">Contacto: +569 123 456 789</p>
     </div>
   </footer>
-
 </body>
 </html>

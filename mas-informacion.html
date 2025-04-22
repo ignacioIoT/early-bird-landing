@@ -5,41 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Más Información - Early Bird</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fade-in-left {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-fade-in-left {
+      animation: fade-in-left 1s ease-out forwards;
+    }
+  </style>
 </head>
 <body class="bg-white text-black flex flex-col min-h-screen">
   <!-- NAVBAR -->
   <nav class="bg-black text-white py-8 px-6 flex items-center justify-between shadow-md">
     <div class="flex items-center space-x-4">
-      <img src="img/early_bird_logo_white.png" alt="Logo Early Bird" class="w-24 h-auto">
+      <img src="img/early_bird_logo.png" alt="Logo Early Bird" class="w-24 h-auto opacity-0 translate-x-[-20px] animate-fade-in-left">
     </div>
     <ul class="flex space-x-10">
-      <li><a href="index.html" class="text-xl tracking-wider uppercase hover:text-yellow-400">Inicio</a></li>
-      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase hover:text-yellow-400">Nosotros</a></li>
-      <li><a href="proposito.html" class="text-xl tracking-wider uppercase hover:text-yellow-400">Propósito</a></li>
+      <li><a href="index.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Inicio</a></li>
+      <li><a href="nosotros.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Nosotros</a></li>
+      <li><a href="proposito.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Propósito</a></li>
+      <li><a href="mas_informacion.html" class="text-xl tracking-wider uppercase border-b-2 border-transparent hover:border-yellow-400 transition-all duration-300 pb-1">Más Información</a></li>
     </ul>
   </nav>
 
+  <!-- HEADER -->
+  <header class="relative h-[50vh] bg-cover bg-center" style="background-image:url('img/header_info.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">Más Información</h1>
+    </div>
+  </header>
+
   <!-- CONTENIDO -->
-  <main class="flex-grow py-12 px-6 max-w-6xl mx-auto">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-8 text-center text-black">Más Información</h1>
-    <div class="flex flex-col lg:flex-row items-center gap-10">
-      <div class="w-full lg:w-1/2">
-        <img src="img/imagen7.jpg" alt="Imagen descriptiva" class="rounded-xl shadow-lg border border-gray-300">
-      </div>
-      <div class="w-full lg:w-1/2">
-        <p class="text-lg leading-relaxed mb-4">
-          En Early Bird estamos comprometidos con el avance de la industria minera a través de la tecnología, el conocimiento y el acompañamiento estratégico. 
-        </p>
-        <p class="text-lg leading-relaxed mb-4">
-          Si buscas soluciones que impulsen tu productividad, capacitación técnica de nivel internacional o representación de equipos tecnológicos de punta, estás en el lugar correcto.
-        </p>
-        <p class="text-lg leading-relaxed mb-4">
-          Nuestro equipo está disponible para brindarte la información necesaria para que puedas dar el siguiente paso en tu camino hacia la innovación minera.
-        </p>
-        <p class="text-lg leading-relaxed">
-          Ponte en contacto con nosotros y juntos construiremos el futuro de la minería en Chile y Latinoamérica.
-        </p>
-      </div>
+  <main class="flex-grow py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">¿Quiénes somos?</h2>
+    <p class="text-lg leading-relaxed mb-6">
+      En <strong>Early Bird</strong>, nos dedicamos a brindar soluciones tecnológicas de vanguardia para el sector minero. Nuestro enfoque está en la capacitación y distribución de equipos especializados que optimizan los procesos mineros, mejorando la eficiencia y la sostenibilidad en toda la industria.
+    </p>
+    <h3 class="text-2xl font-bold mb-4">Nuestros Servicios</h3>
+    <ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+      <li>Capacitación técnica especializada</li>
+      <li>Venta y distribución de equipos tecnológicos</li>
+      <li>Consultoría en procesos mineros</li>
+      <li>Representación de marcas líderes a nivel global</li>
+    </ul>
+    <h3 class="text-2xl font-bold mb-4">¿Por qué elegirnos?</h3>
+    <p class="text-lg leading-relaxed mb-6">
+      Elegir <strong>Early Bird</strong> significa contar con un socio estratégico que entiende las necesidades de la minería moderna y se compromete con el desarrollo de soluciones innovadoras y sostenibles. Nuestro objetivo es asegurar que nuestros clientes siempre estén un paso adelante en tecnología, eficiencia y rentabilidad.
+    </p>
+
+    <div class="flex justify-center">
+      <img src="img/imagen7.jpg" alt="Imagen de referencia" class="rounded-lg shadow-lg w-full md:w-3/4 lg:w-1/2">
     </div>
   </main>
 
